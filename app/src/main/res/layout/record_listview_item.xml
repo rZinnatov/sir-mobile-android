@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textSize="35sp"
+        android:lines="1"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/roomTextView"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textSize="35sp"
+    />
+</RelativeLayout>

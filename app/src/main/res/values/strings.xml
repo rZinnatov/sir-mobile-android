@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SIR</string>
+    <string name="records_activity_label">Records</string>
+
+    <string name="url_registry_dev">http://192.168.0.103:3000/api/v1/registry</string>
+    <string name="url_registry_prod">https://zz-sir.herokuapp.com/api/v1/registry</string>
+
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_apply">Apply</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_search">Search</string>
+
+    <string name="hint_name">Name</string>
+    <string name="hint_room">Room</string>
+    <string name="hint_amount">Amount</string>
+    <string name="hint_inventory_id">Inventory Id</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_price">Price</string>
+    <string name="hint_comment">Comment</string>
+
+    <string name="records_search_view_hint">Any field</string>
+
+    <string name="message_error_unknown">Unknown error</string>
+    <string name="message_record_added">Record is added</string>
+    <string name="message_record_updated">Record is updated</string>
+    <string name="message_record_removed">Record is deleted</string>
+    <string name="message_record_name_required">Name is required</string>
+</resources>
