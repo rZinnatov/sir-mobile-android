@@ -1,13 +1,13 @@
 package com.zinnatov.sir.services
 
 import android.content.Context
-import android.util.Log
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.zinnatov.sir.R
 import com.zinnatov.sir.domain.Record
+import com.zinnatov.sir.util.Log
 import com.zinnatov.sir.util.getStringOrNull
 import org.json.JSONArray
 import org.json.JSONObject
@@ -30,11 +30,11 @@ class RecordsService(context: Context) {
                                 )
                         )
                     },
-                    Response.ErrorListener { response -> /*Log.e("RecordsService#getAll", response.toString())*/ }
+                    Response.ErrorListener { response -> Log.error("RecordsService#getAll: $response") }
             )
             requestQueue.add(request)
         } catch (ex:Exception) {
-            /*Log.e("RecordsService#getAll", ex.message)*/
+            Log.error("RecordsService#getAll: ${ex.message}")
             callback(ArrayList())
         }
     }
@@ -50,11 +50,11 @@ class RecordsService(context: Context) {
                             callback(response.getString("id"))
                         }
                     },
-                    Response.ErrorListener { response -> /*Log.e("RecordsService#add", response.toString())*/ }
+                    Response.ErrorListener { response -> Log.error("RecordsService#add: $response") }
             )
             requestQueue.add(request)
         } catch (ex:Exception) {
-            /*Log.e("RecordsService#add", ex.message)*/
+            Log.error("RecordsService#add: ${ex.message}")
         }
     }
     fun update(record: Record, callback: () -> Unit) {
@@ -69,11 +69,11 @@ class RecordsService(context: Context) {
                             callback()
                         }
                     },
-                    Response.ErrorListener { response -> /*Log.e("RecordsService#update", response.toString())*/ }
+                    Response.ErrorListener { response -> Log.error("RecordsService#update: $response") }
             )
             requestQueue.add(request)
         } catch (ex:Exception) {
-            /*Log.e("RecordsService#update", ex.message)*/
+            Log.error("RecordsService#update: ${ex.message}")
         }
     }
     fun remove(recordId: String, callback: () -> Unit) {
@@ -88,11 +88,11 @@ class RecordsService(context: Context) {
                             callback()
                         }
                     },
-                    Response.ErrorListener { response -> /*Log.e("RecordsService#remove", response.message)*/ }
+                    Response.ErrorListener { response -> Log.error("RecordsService#remove: ${response.message}") }
             )
             requestQueue.add(request)
         } catch (ex:Exception) {
-            /*Log.e("RecordsService#remove", ex.message)*/
+            Log.error("RecordsService#remove: ${ex.message}")
         }
     }
 
