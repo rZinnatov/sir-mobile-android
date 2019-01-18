@@ -17,10 +17,43 @@
         app:titleTextColor="@color/colorActionBarText"
     />
 
-    <ListView
-        android:id="@+id/recordsListView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/colorListButton"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+    >
+        <ImageView
+            android:id="@+id/newSelectionIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_white_48dp"
+            android:layout_alignParentStart="true"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/newSelectionIcon"
+            android:layout_toStartOf="@+id/newSelectionArrowIcon"
+            android:gravity="center_horizontal"
+
+            android:text="@string/records_new_selection"
+            android:textSize="35sp"
+            />
+        <ImageView
+            android:id="@+id/newSelectionArrowIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_white_48dp"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>

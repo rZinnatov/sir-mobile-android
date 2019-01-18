@@ -18,13 +18,11 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity
-            android:name=".ui.main.MainActivity"
-        >
+        <activity android:name=".ui.main.MainActivity">
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/records_search_view"
-            />
+                android:resource="@xml/records_search_view" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
@@ -34,22 +32,19 @@
         </activity>
         <activity
             android:name=".ui.record.RecordDisplayActivity"
-            android:parentActivityName=".ui.main.MainActivity"
-        >
+            android:parentActivityName=".ui.main.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.main.MainActivity"
-            />
+                android:value=".ui.main.MainActivity" />
         </activity>
         <activity
             android:name=".ui.record.RecordUpsertActivity"
-            android:parentActivityName=".ui.main.MainActivity"
-        >
+            android:parentActivityName=".ui.main.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.main.MainActivity"
-            />
+                android:value=".ui.main.MainActivity" />
         </activity>
+        <activity android:name=".ui.record.RecordListActivity"></activity>
     </application>
 
 </manifest>
